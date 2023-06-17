@@ -1,0 +1,21 @@
+{
+  "name": "Blorp",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "This extension blocks the loading of URLs that match a list of patterns.",
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "blorp",
+        "enabled": true,
+        "path": "blorp.json"
+      }
+    ]
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "declarativeNetRequest"
+  ]
+}

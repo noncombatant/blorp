@@ -1,0 +1,21 @@
+<!--
+Copyright 2022 by [Chris Palmer](https://noncombatant.org)
+SPDX-License-Identifier: Apache-2.0
+-->
+<!doctype html>
+<html lang=en-us>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="popup.css"/>
+<title>Blorp</title>
+
+<h1>Blorp List</h1>
+
+<p>Add your list of <a
+href="https://developer.chrome.com/docs/extensions/mv3/match_patterns/"
+target="_new">URL patterns</a> to block here, 1 per line.</p>
+
+<textarea id="blorpList"></textarea>
+<div><input type="button" id="applyButton" value="Apply"/></div>
+<div id="errorsDiv"></div>
+<script type="module" src="popup.js"></script>
