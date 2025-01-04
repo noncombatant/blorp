@@ -1,6 +1,20 @@
+body {
+  line-height: 140%;
+  font-family: system-ui;
+  font-size: 100%;
+}
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+}
+
 textarea {
   width: 30em;
   height: 20em;
+  resize: none;
+  font-family: monospace;
+  font-size: inherit;
 }
 
 #buttonsDiv {

@@ -1,4 +1,4 @@
-# Blorp
+# Blorp: Simple site allow/deny list
 
 Blorp is the simplest possible content blocker for browsers that use the
 Chromium extension API. At your choice, it blocks the loading of URLs that match
