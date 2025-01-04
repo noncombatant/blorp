@@ -13,11 +13,14 @@ SPDX-License-Identifier: Apache-2.0
 
 <p>Add your list of <a
         href="https://developer.chrome.com/docs/extensions/mv3/match_patterns/"
-        target="_new">URL patterns</a> to block or allow here, 1 per line.</p>
+        target="_new">URL patterns</a> to block or allow here, 1 per line. To
+    turn off filtering, uncheck <b>Enabled</b>.</p>
 
 <textarea id="blorpList"></textarea>
 <div id="buttonsDiv">
     <p>
+        <input type="checkbox" id="listEnabled" name="listEnabled" checked />
+        <label for="listEnabled">Enabled</label>
         <input type="radio" id="listTypeBlock" name="listType" checked />
         <label for="listTypeBlock">Block</label>
         <input type="radio" id="listTypeAllow" name="listType" />
