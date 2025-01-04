@@ -15,6 +15,16 @@
   "action": {
     "default_popup": "popup.html"
   },
+  "background": {
+    "service_worker": "extension.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "blorp.png",
+    "32": "blorp.png",
+    "48": "blorp.png",
+    "128": "blorp.png"
+  },
   "permissions": [
     "declarativeNetRequest"
   ]

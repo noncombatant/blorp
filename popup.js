@@ -58,7 +58,12 @@ export const applyBlorpList = async function (block) {
     }
   }
   await chrome.declarativeNetRequest.updateDynamicRules(options)
+  await setIconAndTitle(listEnabled.checked)
   log("Loaded", options.addRules.length, "rules")
+}
+
+const onDoneButtonClick = async function (event) {
+  window.close()
 }
 
 const onApplyButtonClick = async function (event) {
@@ -68,12 +73,22 @@ const onApplyButtonClick = async function (event) {
   await applyBlorpList(listTypeBlock.checked)
 }
 
+const setIconAndTitle = async function (enabled) {
+  chrome.action.setTitle({ title: enabled ? "Enabled" : "Not enabled" })
+  //chrome.action.setIcon({ path: enabled ? "/..." : "/..." })
+}
+
 document.body.onload = async function (event) {
   blorpList.value = localStorage.getItem("blorpList")
-  let enabled = localStorage.getItem("listEnabled")
+
+  const enabled = localStorage.getItem("listEnabled")
   listEnabled.checked = enabled !== "false"
-  let listType = localStorage.getItem("listType")
+  setIconAndTitle(enabled !== "false")
+
+  const listType = localStorage.getItem("listType")
   listTypeBlock.checked = listType !== "allow"
   listTypeAllow.checked = listType === "allow"
+
+  doneButton.addEventListener("click", onDoneButtonClick)
   applyButton.addEventListener("click", onApplyButtonClick)
 }
