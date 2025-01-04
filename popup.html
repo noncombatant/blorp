@@ -6,16 +6,26 @@ SPDX-License-Identifier: Apache-2.0
 <html lang=en-us>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="popup.css"/>
+<link rel="stylesheet" href="popup.css" />
 <title>Blorp</title>
 
 <h1>Blorp List</h1>
 
 <p>Add your list of <a
-href="https://developer.chrome.com/docs/extensions/mv3/match_patterns/"
-target="_new">URL patterns</a> to block here, 1 per line.</p>
+        href="https://developer.chrome.com/docs/extensions/mv3/match_patterns/"
+        target="_new">URL patterns</a> to block or allow here, 1 per line.</p>
 
 <textarea id="blorpList"></textarea>
-<div><input type="button" id="applyButton" value="Apply"/></div>
+<div id="buttonsDiv">
+    <p>
+        <input type="radio" id="listTypeBlock" name="listType" checked />
+        <label for="listTypeBlock">Block</label>
+        <input type="radio" id="listTypeAllow" name="listType" />
+        <label for="listTypeAllow">Allow</label>
+    </p>
+    <p>
+        <input type="button" id="applyButton" value="Apply" />
+    </p>
+</div>
 <div id="errorsDiv"></div>
 <script type="module" src="popup.js"></script>

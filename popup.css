@@ -3,9 +3,6 @@ textarea {
   height: 20em;
 }
 
-input {
-  font-size: 120%;
-  margin-right: 0;
-  margin-left: auto;
-  display: block;
+#buttonsDiv {
+  text-align: right;
 }
